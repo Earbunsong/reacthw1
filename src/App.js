@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Profile from "./components/Profile";
+import Artical from "./components/Artical";
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
+import Feedback from "./components/Feedback";
+export default function App() {
+  let isMale  = true;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+ <>
+
+   <Nav />
+   <main>
+    <div className="d-flex justify-content-evenly" >
+    <Artical/>
+   <Artical/>
+   <Artical/>
+   <Artical/>
+   <Artical/>
     </div>
+    <Feedback/>
+   </main>
+   <footer>
+     <Footer/>
+   </footer>
+ </>
   );
 }
 
-export default App;
